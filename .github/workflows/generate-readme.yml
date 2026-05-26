@@ -1,0 +1,56 @@
+name: Generate README
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - "data/military-ranges.yaml"
+      - "scripts/generate_readme.py"
+      - ".github/workflows/generate-readme.yml"
+  pull_request:
+    paths:
+      - "data/military-ranges.yaml"
+      - "scripts/generate_readme.py"
+      - "README.md"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # Need a token that can push back. The default GITHUB_TOKEN works
+          # for pushes to the same repo on non-fork PRs and for direct pushes.
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install pyyaml
+
+      - name: Verify README is in sync (pull requests)
+        if: github.event_name == 'pull_request'
+        run: python scripts/generate_readme.py --check
+
+      - name: Regenerate README
+        if: github.event_name != 'pull_request'
+        run: python scripts/generate_readme.py
+
+      - name: Commit changes
+        if: github.event_name != 'pull_request'
+        run: |
+          if git diff --quiet README.md; then
+            echo "README.md is already up to date."
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git commit -m "chore: regenerate README from military-ranges.yaml"
+          git push

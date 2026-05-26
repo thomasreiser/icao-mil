@@ -1,0 +1,237 @@
+# Global military ICAO 24-bit hex ranges.
+#
+# Source of truth for the README. Edit this file; the README is regenerated
+# automatically by the GitHub Actions workflow in .github/workflows/.
+#
+# Schema:
+#   ranges:    active military hex allocations (rendered as the main table)
+#   disabled:  ranges deliberately excluded upstream due to civilian collisions
+#   gaps:      major military operators with no published sub-allocation
+#   sources:   reference URLs cited at the bottom of the README
+#
+# Each range entry:
+#   hex_start: 6-hex-digit ICAO 24-bit address (uppercase, no prefix)
+#   hex_end:   inclusive end of the range
+#   country:   country name as it should appear in the table
+#   unit:      branch / service; leave empty string if unknown
+
+ranges:
+  - hex_start: "010070"
+    hex_end:   "01008F"
+    country:   Egypt
+    unit:      Egyptian Armed Forces
+
+  - hex_start: "0A4000"
+    hex_end:   "0A4FFF"
+    country:   Algeria
+    unit:      Algerian Air Force
+
+  - hex_start: "33FF00"
+    hex_end:   "33FFFF"
+    country:   Italy
+    unit:      Aeronautica Militare / Marina Militare / Aviazione dell'Esercito
+
+  - hex_start: "350000"
+    hex_end:   "37FFFF"
+    country:   Spain
+    unit:      Ejército del Aire / Armada / FAMET
+
+  - hex_start: "3AA000"
+    hex_end:   "3AFFFF"
+    country:   France
+    unit:      Armée de l'Air et de l'Espace / Aéronavale / ALAT
+
+  - hex_start: "3B7000"
+    hex_end:   "3BFFFF"
+    country:   France
+    unit:      Armée de l'Air et de l'Espace / Aéronavale / ALAT
+
+  - hex_start: "3EA000"
+    hex_end:   "3EBFFF"
+    country:   Germany
+    unit:      Bundeswehr (Luftwaffe / Heer / Marine)
+
+  - hex_start: "3F4000"
+    hex_end:   "3F7FFF"
+    country:   Germany
+    unit:      Bundeswehr (Luftwaffe / Heer / Marine)
+
+  - hex_start: "3F8000"
+    hex_end:   "3FBFFF"
+    country:   Germany
+    unit:      Bundeswehr (Luftwaffe / Heer / Marine)
+
+  - hex_start: "400000"
+    hex_end:   "40003F"
+    country:   United Kingdom
+    unit:      RAF / RN / AAC
+
+  - hex_start: "43C000"
+    hex_end:   "43CFFF"
+    country:   United Kingdom
+    unit:      RAF / RN / AAC
+
+  - hex_start: "444000"
+    hex_end:   "446FFF"
+    country:   Austria
+    unit:      Österreichisches Bundesheer / Luftstreitkräfte
+
+  - hex_start: "44F000"
+    hex_end:   "44FFFF"
+    country:   Belgium
+    unit:      Belgian Air Component
+
+  - hex_start: "457000"
+    hex_end:   "457FFF"
+    country:   Bulgaria
+    unit:      Bulgarian Air Force
+
+  - hex_start: "45F400"
+    hex_end:   "45F4FF"
+    country:   Denmark
+    unit:      Flyvevåbnet
+
+  - hex_start: "468000"
+    hex_end:   "4683FF"
+    country:   Greece
+    unit:      Hellenic Air Force
+
+  - hex_start: "473C00"
+    hex_end:   "473C0F"
+    country:   Hungary
+    unit:      Magyar Légierő
+
+  - hex_start: "478100"
+    hex_end:   "4781FF"
+    country:   Norway
+    unit:      Luftforsvaret
+
+  - hex_start: "480000"
+    hex_end:   "480FFF"
+    country:   Netherlands
+    unit:      Koninklijke Luchtmacht
+
+  - hex_start: "48D800"
+    hex_end:   "48D87F"
+    country:   Poland
+    unit:      Siły Powietrzne
+
+  - hex_start: "497C00"
+    hex_end:   "497CFF"
+    country:   Portugal
+    unit:      Força Aérea Portuguesa
+
+  - hex_start: "498420"
+    hex_end:   "49842F"
+    country:   Czech Republic
+    unit:      Vzdušné síly Armády ČR
+
+  - hex_start: "4B7000"
+    hex_end:   "4B7FFF"
+    country:   Switzerland
+    unit:      Schweizer Luftwaffe
+
+  - hex_start: "4B8200"
+    hex_end:   "4B82FF"
+    country:   Turkey
+    unit:      Türk Hava Kuvvetleri
+
+  - hex_start: "70C070"
+    hex_end:   "70C07F"
+    country:   Oman
+    unit:      Royal Air Force of Oman
+
+  - hex_start: "710258"
+    hex_end:   "71028F"
+    country:   Saudi Arabia
+    unit:      Royal Saudi Air Force
+
+  - hex_start: "710380"
+    hex_end:   "71039F"
+    country:   Saudi Arabia
+    unit:      Royal Saudi Air Force
+
+  - hex_start: "738A00"
+    hex_end:   "738AFF"
+    country:   Israel
+    unit:      Israeli Air Force / IDF
+
+  - hex_start: "7CF800"
+    hex_end:   "7CFAFF"
+    country:   Australia
+    unit:      RAAF / RAN / Australian Army
+
+  - hex_start: "800200"
+    hex_end:   "8002FF"
+    country:   India
+    unit:      Indian Air Force / Indian Navy / Indian Army
+
+  - hex_start: "ADF7C8"
+    hex_end:   "ADF7CF"
+    country:   United States
+    unit:      US Military (sub-block)
+
+  - hex_start: "ADF7D0"
+    hex_end:   "ADF7DF"
+    country:   United States
+    unit:      US Military (sub-block)
+
+  - hex_start: "ADF7E0"
+    hex_end:   "ADF7FF"
+    country:   United States
+    unit:      US Military (sub-block)
+
+  - hex_start: "ADF800"
+    hex_end:   "ADFFFF"
+    country:   United States
+    unit:      US Military (sub-block)
+
+  - hex_start: "AE0000"
+    hex_end:   "AFFFFF"
+    country:   United States
+    unit:      USAF / USN / USMC / US Army / USCG (main DoD block)
+
+  - hex_start: "C20000"
+    hex_end:   "C3FFFF"
+    country:   Canada
+    unit:      Royal Canadian Air Force
+
+  - hex_start: "E40000"
+    hex_end:   "E41FFF"
+    country:   Brazil
+    unit:      Força Aérea Brasileira / Marinha / Exército
+
+disabled:
+  - hex_start: "506F32"
+    hex_end:   "506FFF"
+    country:   Slovenia
+    notes:     Disabled — civilian collisions
+
+  - hex_start: "E80600"
+    hex_end:   "E806FF"
+    country:   Chile
+    notes:     Disabled — civilian collisions
+
+gaps:
+  - Russia
+  - China
+  - North Korea
+  - Iran
+  - Pakistan
+  - Ukraine
+  - South Korea (ROKAF)
+  - Japan (JASDF / JMSDF / JGSDF)
+  - Most of Africa, Central Asia, and South-East Asia
+
+sources:
+  - title: "readsb `aircraft.c` — `MIL_RANGES`"
+    url:   https://github.com/wiedehopf/readsb/blob/dev/aircraft.c
+    note:  canonical community list
+  - title: "tar1090-db `ranges.json`"
+    url:   https://github.com/wiedehopf/tar1090-db/blob/master/ranges.json
+  - title: Mictronics aircraft database
+    url:   https://mictronics.de/aircraft-database/
+  - title: Eurocontrol Mode S / ADS-B Military Compendium
+    url:   https://www.eurocontrol.int/sites/default/files/2024-05/eurocontrol-compendium-mode-s-ads-b-military.pdf
+  - title: sdr-enthusiasts/plane-alert-db
+    url:   https://github.com/sdr-enthusiasts/plane-alert-db
